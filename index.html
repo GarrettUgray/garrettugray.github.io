@@ -24,8 +24,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts: switched from Inter to Prata -->
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -41,19 +41,23 @@
     <header class="header">
         <div class="container">
             <nav class="nav">
-                <div class="logo">
-                    <a href="#home">Ugray Consulting</a>
+                <div id="ignoreflex" >
+                    
+                    <div class="logo">
+                        <img src="images/Ugray-Consulting-logo-compressed.jpg" width="100px"/>
+                        <!-- <a href="#home">Ugray Consulting</a> -->
+                    </div>
+                    
+                    <!-- Desktop Navigation -->
+                    <ul class="nav-menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#capabilities">Capabilities</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#case-studies">Blog/Resources</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
                 </div>
-                
-                <!-- Desktop Navigation -->
-                <ul class="nav-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#capabilities">Capabilities</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#case-studies">Case Studies</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
                 
                 <!-- Mobile Menu Toggle -->
                 <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
@@ -67,7 +71,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#capabilities">Capabilities</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#case-studies">Case Studies</a></li>
+                    <li><a href="#case-studies">Blog/Resources</a></li>
                     <li><a href="#team">Team</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -80,12 +84,14 @@
         <div class="container">
             <div class="hero-content">
                 <h1>What's your next brilliant play?</h1>
-                <p class="subtitle">Expert insight with diverse perspectives. Turn friction into momentum with strategic Indigenous engagement and relations solutions. First Nation-owned. Game-changing work.</p>
-                <p class="description">
-                    Ugray Consulting partners with organizations across industries to de-risk their projects with strategic insights tailored to their business plans and needs. Chart a path forward with enterprise-level expertise and the agility and cost-efficiency many smaller and start-up companies need.
-                </p>
+                <p class="subtitle">Strategic Indigenous engagement and relations. Build genuine trust and consensus with expert insight from every angle. We help clients see a clear path forward one step at a time. 100% First Nation-owned.</p>
+                <!-- Inserted image after the subtitle -->
+                <img src="images/Photoshop-prism-brilliantshine.png" alt="Prism brilliant shine" class="hero-image" />
+                    <p class="description">
+                        Turn points of friction into momentum with enterprise-level expertise. Proven strategies that reduce risk and build meaningful relationships with a track record of success.
+                    </p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Let's Chart Your Path Forward</a>
+                    <a href="#contact" class="btn btn-primary">Let's Connect</a>
                     <a href="#capabilities" class="btn btn-outline-white">Capabilities</a>
                 </div>
             </div>
@@ -96,115 +102,94 @@
     <section id="capabilities" class="section capabilities">
         <div class="container">
             <div class="text-center mb-lg">
-                <h2>How We Create Value</h2>
-                <p>Let's turn your biggest challenges into your biggest opportunities with proven, ethical and comprehensive strategic Indigenous engagement and relations solutions tailored to your unique business plans and needs.</p>
+                <h2 class="section-heading-prata">How We Help Clients Create Value</h2>
+                <p>Ethical and comprehensive Indigenous engagement and relations planning and execution bespoke to your business plans and timelines.</p>
             </div>
             
             <div class="capabilities-grid">
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
                     <h3>Strategic Indigenous Engagement</h3>
-                    <p>Develop strategies that align with your vision and market realities. We design and implement engagement strategies that go beyond regulatory compliance to foster authentic partnerships. Our approach ensures early, meaningful dialogue with Indigenous communities, aligning project objectives with cultural priorities and treaty rights.</p>
+                    <p>Navigate complexity with engagement strategies  scalable to any level that align with your vision, project timeline, and market realities. From bespoke advice with initial community outreach, to developing regional engagement and relationship management plans in complex legal and political enviroments - we provide clarity and a steady hand to help guide you forward.</p>
+                                    <p><em>Please see our Blog/Resources section for free templates, guides, and other resources including engagement plans.</em></p>
+                </div>
+
+                <div class="card">
+                    <h3>Section 35 Rights: Duty to Consult and Consultation Plans</h3>
+                    <p>We help clients understand and fulfill their legal obligations under Section 35 of the Constitution Act, including the Duty to Consult and the development of robust consultation plans. Our approach ensures meaningful engagement with Indigenous communities, supports regulatory compliance, and builds trust through transparent, respectful, and culturally informed processes.</p>
+                                    <p><em>Please see our Blog/Resources section for free templates, guides, and other resources including consultation plans.</em></p>
                 </div>
                 
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-sync-alt"></i>
-                    </div>
-                    <h3>Regulatory & Compliance Advisory</h3>
-                    <p>We help clients meet and exceed legal obligations, including Duty to Consult, Free, Prior, and Informed Consent (FPIC), and other jurisdictional requirements including local Indigenous protocols and traditions. Our structured compliance frameworks can help safeguard project timelines and reduce exposure to legal and reputational risk.</p>
+                    <h3>Grandfather Teachings - Business Ethics</h3>
+                    <p>Guided by the Eight Grandfather Teachings—Wisdom, Love, Respect, Bravery, Honesty, Humility, Truth, and Forgiveness—Ugray Consulting champions ethical resource development that honours treaty rights, cultural values, and environmental stewardship. Through collaborative strategies and transparent dialogue, we strive to create shared prosperity, uphold Reconciliation principles, and ensure that every project reflects integrity, inclusivity, and long-term benefit for all.</p>
                 </div>
                 
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Business Ethics - The 7 Grandfather Teachings</h3>
-                    <p>Fostering meaningful, respectful, and sustainable partnerships between industry and Indigenous communities. Guided by the Seven Grandfather Teachings—Wisdom, Love, Respect, Bravery, Honesty, Humility, and Truth—we champion ethical resource development that honors treaty rights, cultural values, and environmental stewardship. Through collaborative strategies and transparent dialogue, we strive to create shared prosperity, uphold Reconciliation principles, and ensure that every project reflects integrity, inclusivity, and long-term benefit for all.</p>
+                    <h3>Customized Training, Capacity Building and Advisory Support</h3>
+                    <p>We can equip your team with the knowledge and tools to engage with Indigenous communities confidently and respectfully. Identify opportunities to build trust, anticipate and respond to issues before they escalate, and prepare for the future by aligning with your timeline and strategic business plan. We have many years of experience working with internal and external legal counsel in complex negotiations and strategy to share.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Issues Management and Communications Strategy: Protect Your Reputation</h3>
+                    <p>Manage complex issues with expert advisory support that draws on government, energy, and infrastructure project experience. From providing bespoke advice and best practices on communications to helping clients create their own narrative and story to tell, Ugray Consulting can help with it all—protecting your reputation and ensuring your message is clear, credible, and effective.</p>
                 </div>
                 
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Training and Capacity Building</h3>
-                    <p>Build leadership capabilities that drive results into the future. We equip leadership teams with the knowledge and tools to engage confidently and respectfully. Through tailored training and advisory support, we embed cultural awareness into corporate decision-making, ensuring alignment with Reconciliation principles and ESG commitments.</p>
-                </div>
                 
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Risk Management</h3>
-                    <p>Identify, assess, and mitigate complex business risks to your project timeline proactively. We help you build resiliency that can adapt to uncertainty and identify opportunities to integrate local Indigenous and Traditional Knowledge and cultural protocols while maintaining stakeholder confidence. We deploy proactive strategies to manage consultation records, anticipate Rightsholder concerns, and resolve issues before they escalate—protecting both timelines and community trust.</p>
-                </div>
-                
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>The Formula for Success</h3>
-                    <p>While the formula itself remains proprietary, it is robust and comprehensive in breadth and depth and its essence is embedded in the Ugray Consulting harmonized methodology for strategic Indigenous engagement, relations, and formal consultations all working together synergistically, ultimately toward final project approvals with social license and Indigenous partnership and support:</p>
-                    <p><strong>Risk Identification and Mitigation:</strong> We anticipate and address critical success factors—such as the general strength and quality of relationships with local and regional Indigenous communities, Duty to Consult, FPIC, and consultation record management—through structured processes that safeguard timelines and regulatory compliance.</p>
-                    <p><strong>Value Co-Creation:</strong> Beyond compliance, we identify and activate opportunities for collaboration, cultural respect, and shared prosperity, building trust with Rightsholders and transforming potential friction points into catalysts for partnership.</p>
-                    <p><strong>Integrated Approach:</strong> Our harmonized methodology and framework is adaptable to any scale and aligns project objectives and timelines with community and Rightsholder priorities, leveraging data-driven insights and cultural intelligence to deliver outcomes that are both sustainable and mutually beneficial.</p>
+                    <h3>Proven Methodologies for Indigenous Engagement & Consensus Building</h3>
+                    <p><strong>Systems Mapping</strong> - Navigate complex Indigenous-industry relationships by identifying key Rightsholders and stakeholders, understanding regulatory landscapes, and mapping the real drivers of trust or friction in your business environment.</p>
+                    <p><strong>Scenario Planning</strong> - Plan your next moves and anticipate changes in your business environment and Indigenous community relationships through scenario development that provides clarity and shows you the next steps forward. </p>
+                    <p><strong>Values-Based Strategic Planning</strong> - Integrate traditional Indigenous knowledge early in project planning to de-risk timelines, strengthen alignment, and build authentic engagement rooted in shared community values.</p>
+                    <p><strong>Proven Results</strong> – Based on our experience, these methodologies simplify complex environments, safeguard project timelines, and help clients build genuine social license to operate.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
     <!-- About Section -->
     <section id="about" class="section about">
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>About Ugray Consulting Limited</h2>
-                    <p>
-                        Going beyond development and implementation strategies for Indigenous engagement and consultation—we architect enduring relationships with Indigenous communities guided by the 7 Grandfather Teachings to ensure an ethical approach with an experienced and steady hand that accelerates project success and advances Reconciliation. Ugray Consulting delivers results through personalized service, combining deep government, natural resources, and energy industry expertise with a strong track record of success in guiding projects through complex and sensitive legal, political and business environments in Canada.
-                    </p>
+                    <div class="about-section-with-image">
+                        <div>
+                            <h2>About Ugray Consulting Limited</h2>
+                            <p>
+                                We build enduring relationships with Indigenous communities guided by the 8 Grandfather Teachings, ensuring ethical engagement that accelerates project success and advances Reconciliation.
+                            </p>
+                        </div>
 
-                    <h2>Mission Statement</h2>
-                    <p>
-                        Our mission is to foster meaningful, respectful, and sustainable partnerships between industry and Indigenous communities. Guided by the Seven Grandfather Teachings—Wisdom, Love, Respect, Bravery, Honesty, Humility, and Truth—we champion ethical resource development that honours treaty rights, cultural values, and environmental stewardship. Through collaborative strategies and transparent dialogue, we strive to help co-create shared prosperity, uphold Reconciliation principles, and ensure that every project reflects integrity, inclusivity, and long-term benefit for all.
-                    </p>
+                    </div>
 
-                    <p>
-                        Our approach combines diverse experience and perspectives from government, private sector, and personal Indigenous World Views and lived experiences to identify solutions and chart a path forward.
-                    </p>
-                    
-                    <h2>Vision Statement</h2>
-                    <p>
-                        To be a trusted leader in advancing Reconciliation and sustainable resource development by creating authentic, values-driven partnerships between Indigenous communities and industry. Ugray Consulting envisions a future where every project honours cultural heritage, protects the environment, and delivers shared prosperity—guided by the Seven Grandfather Teachings as the foundation for respect, integrity, and collaboration.
-                    </p>
+                    <div class="about-section-with-image">
 
-                    <h2>Competitive Strategic Advantage</h2>
-                    <p>
-                        A problem is a terrible thing to waste. Often, looking at complex issues from a different perspective illuminates the next step forward in the right direction. We don't just provide recommendations—we partner with you to implement solutions that create lasting value and competitive advantage from every angle.
-                    </p>
-                    <a href="#contact" class="btn btn-primary mt-lg">Let's Chart Your Path Together</a>
+                    <div class="competitive-advantage-section">
+                        <div class="advantage-content">
+                            <div>
+                                <h2>How We Deliver Results</h2>
+                                <p>
+                                    The Eagle represents the ability to see all paths in the Grandfather Teachings —soaring high enough to perceive the complete landscape while maintaining clarity on the destination ahead.
+<br><br>
+                                    <img src="images/Eagle 3 jpeg.jpg" alt="Eagle" style="display:block; margin: 20px auto; max-width: 400px; width:100%; height:auto;">
+                                    <br>
+    <strong>Constitutional & Legal Expertise</strong> - Government experience in relevant case law and tracking of evolving court rulings and how they impact industry at all stages of the project life cycle.
+    <img src="images/JPEG black blue prism copy.jpg" alt="Legal Expertise Prism" style="display:block; margin: 20px auto; max-width: 400px; width:100%; height:auto;">
+    <br>
+<strong>Infrastructure Megaproject Experience</strong> - Track record of success with Canada's Nuclear Waste Management Organization, where we helped navigate the site selection for Canada's used nuclear fuel repository—the nation's largest infrastructure megaproject requiring unprecedented Indigenous engagement.
+<img src="images/JPEG black rose prism copy.jpg" alt="Megaproject Prism" style="display:block; margin: 20px auto; max-width: 400px; width:100%; height:auto;">
+<br>
+<strong>Lived Indigenous Experience</strong> - Authentic understanding of Indigenous perspectives, values, and community dynamics that cannot be learned from textbooks or training sessions.
+<img src="images/JPEG black clear blue and yellow gold gradient double refraction prism.jpg" alt="Lived Indigenous Experience Prism" style="display:block; margin: 20px auto; max-width: 400px; width:100%; height:auto;">
+<br>
+<strong>Academic Foundation</strong> - 10 years of university eduction in the sciences, business management, and economics provides cross-disciplinary analytical expertise and insight.
+<img src="images/JPEG black green prism copy.jpg" alt="Academic Foundation Prism" style="display:block; margin: 20px auto; max-width: 400px; width:100%; height:auto;">
+<br><br>
+By looking at problems as opportunities from different perspectives, we deliver results by simplifying the landscape and help all parties move toward solutions that honour Indigenous rights, satisfy regulatory requirements, and achieve successful outcomes. <br><br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary mt-lg">Let's Connect</a>
                 </div>
                 
                 <div class="about-stats">
-                    <div class="stats">
-                        <div class="stat">
-                            <span class="stat-number">150</span>
-                            <span class="stat-label">Projects Completed</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">95</span>
-                            <span class="stat-label">Client Satisfaction %</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">25</span>
-                            <span class="stat-label">Industries Served</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">10</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -214,39 +199,36 @@
     <section id="case-studies" class="section">
         <div class="container">
             <div class="text-center mb-lg">
-                <h2>Success Stories</h2>
-                <p>Real results from our strategic partnerships</p>
+                <h2 class="section-heading-prata">Blog/Resources</h2>
+                <p>Access practical tools, expert insights, and proven frameworks to strengthen your Indigenous engagement approach. Our resource library combines constitutional law updates, industry best practices, and real-world lessons learned.</p>
+                <div style="text-align: left;">
+                    <p><strong>What You'll Find:</strong><br>
+                    • Consultation & Engagement Plans - Template frameworks and strategic approaches for meaningful Indigenous consultation and engagement<br>
+                    • Best Practice Guides - Step-by-step guidance with a focus on Indigenous cultural awareness and building authentic relationships<br>
+                    • Checklists & Tools - Practical resources to help you plan and engage with Indigenous communities effectively<br>
+                    • Industry Intelligence - Analysis of evolving case law, regulatory changes, and emerging trends in Indigenous-industry relations</p>
+                    <p>Stay informed on the latest developments in Section 35 rights, Supreme Court decisions, and their implications for your projects. All resources are grounded in real-world experience from working in government, energy and infrastructure initiatives and deep understanding of Indigenous perspectives.<br>
+                    Updated regularly to reflect the evolving legal and regulatory landscape.</p>
+                </div>
             </div>
             
             <div class="grid grid-3">
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-industry"></i>
-                    </div>
-                    <h3>Manufacturing Transformation</h3>
-                    <p><strong>Challenge:</strong> A mid-size manufacturer faced declining margins and operational inefficiencies.</p>
-                    <p><strong>Solution:</strong> Implemented lean manufacturing principles and digital process optimization.</p>
-                    <p><strong>Result:</strong> 30% reduction in operational costs and 25% improvement in production efficiency within 12 months.</p>
+                    <h3>Consultation & Engagement Plans</h3>
+                    <p style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 1.1rem; font-weight: 500; margin-bottom: 0.5rem;">Consultation Planning Guide</p>
+                    <p style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 1.1rem; font-weight: 500; margin-bottom: 1rem;">Engagement Planning Guide</p>
                 </div>
                 
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <h3>Healthcare System Optimization</h3>
-                    <p><strong>Challenge:</strong> Regional healthcare provider needed to improve patient outcomes while reducing costs.</p>
-                    <p><strong>Solution:</strong> Redesigned care delivery processes and implemented performance management systems.</p>
-                    <p><strong>Result:</strong> 20% improvement in patient satisfaction scores and $2M annual cost savings.</p>
+                    <h3>Best Practice Guides, Checklists & Tools</h3>
+                    <p style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 1.1rem; font-weight: 500; margin-bottom: 0.5rem;">Initial Community Outreach Planning Checklist</p>
+                    <p style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 1.1rem; font-weight: 500; margin-bottom: 1rem;">Best Practice Guide for Meeting Planning in an Indigenous Community</p>
                 </div>
                 
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>Tech Startup Scale-Up</h3>
-                    <p><strong>Challenge:</strong> Fast-growing startup needed scalable operations and strategic direction.</p>
-                    <p><strong>Solution:</strong> Developed growth strategy and implemented scalable business processes.</p>
-                    <p><strong>Result:</strong> Successfully scaled from $5M to $25M revenue while maintaining operational efficiency.</p>
+                    <h3>Industry Intelligence</h3>
+                    <p style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 1.1rem; font-weight: 500; margin-bottom: 0.5rem;">Junior Mining Exploration and Prospecting in Northwestern Ontario: A Distributive Politics Analysis</p>
+                    <p style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 1.1rem; font-weight: 500; margin-bottom: 1rem;">Canadian Nuclear Laboratories Near Surface Disposal Facility Case Study: Landmark Ruling on Indigenous Consultation and Traditional Law Recognition</p>
                 </div>
             </div>
         </div>
@@ -256,32 +238,22 @@
     <section id="team" class="section section-light">
         <div class="container">
             <div class="text-center mb-lg">
-                <h2>Leadership Team</h2>
-                <p>Experienced professionals dedicated to your success</p>
+                <h2 class="section-heading-prata">Founder & Advisory Network</h2>
             </div>
             
             <div class="grid grid-2">
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <h3>Senior Partner & Founder</h3>
-                    <p>With over 15 years of consulting experience across multiple industries, our founder brings deep expertise in strategic planning, organizational transformation, and executive leadership. Previously worked with top-tier consulting firms serving Fortune 500 clients.</p>
-                    <p><strong>Specializations:</strong> Strategic Planning, M&A Integration, Digital Transformation</p>
+                    <img src="images/headshot 2 for editing-2 Photoshopped golden filter copy.jpg" alt="Founder Headshot" style="display:block; margin: 16px auto 12px auto; max-width:440px; width:100%; height:auto; border-radius:8px; box-shadow:0 4px 16px rgba(0,0,0,0.12);">
+                    <h3 style="text-align:center;">Founder</h3>
+                    <p>Proud member of Bearskin Lake First Nation in Treaty 9, <span style="font-family: 'Poppins', sans-serif; font-weight: bold; color: #000;">Garrett Ugray</span> brings over 10 years of specialized expertise with a track record of success in Indigenous engagement, relations, complex multi-party project management (three or more parties), consensus building, negotiations and conflict resolution with the Ministry of Natural Resources and Foresty (MNRF) fulfilling the Crown’s Duty to Consult, and the Nuclear Waste Management Organization (NWMO) working as an Indigenous Engagement Associate and later Manager of Nuclear Security and Emergency Preparedness. He was part of an award-winning site selection team that navigated the complex legal and political environment in northwestern Ontario to successfully execute a regional Indigenous engagement strategy to find informed and willing host communities with Ignace and Wabigoon Lake Ojibway Nation to store all of Canada’s used nuclear fuel underground in a deep geological repository. </p>
+                    <p>He also has over 20 years of experience as a trainer (forest firefighting, MNRF Aboriginal Relations Trainer, NWMO cultural awareness trainer, nuclear security and emergency preparedness and de-escalation trainer), has been invited to speak overseas on challenges and opportunities in working with Indigenous communities in emergency response, and appeared on the Aboriginal Peoples Television Network (APTN) documentary series “Playing With Fire”.  Garrett founded Ugray Consulting Limited with the hopes of helping to create more opportunities for Indigenous communities to enjoy transformational change for the positive with ethical and sustainable economic development.</p>
                 </div>
                 
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h3>Principal Consultant</h3>
-                    <p>A seasoned operations expert with extensive experience in process optimization, performance management, and organizational design. Holds advanced certifications in Lean Six Sigma and change management methodologies.</p>
-                    <p><strong>Specializations:</strong> Operational Excellence, Process Improvement, Performance Management</p>
-                </div>
-            </div>
             
             <div class="text-center mt-lg">
-                <p><strong>Extended Network:</strong> We collaborate with a carefully selected network of industry specialists, subject matter experts, and implementation partners to ensure you have access to the best talent for your specific needs.</p>
+                <h3>Advisory Network</h3>
+                <p style="text-align: left;">Garrett collaborates with a carefully selected network of industry specialists, subject matter experts, including current and former Chiefs, Ministers, Elders, Knowledgeholders and government officials to help him orient both his own compass, and yours.</p>
             </div>
         </div>
     </section>
@@ -289,12 +261,12 @@
     <!-- Contact Section -->
     <section id="contact" class="section contact">
         <div class="container">
-            <h2 class="text-center">Let's Start Your Transformation</h2>
-            
+            <h2 class="text-center" style="font-family: 'Prata', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 2.5rem;">Contact Us</h2>
+            <img src="images/Ugray-Consulting-logo-compressed.jpg" alt="Ugray Consulting Logo" style="display:block; margin: 24px auto 32px auto; width: 27.2rem; max-width: 100%; height:auto;">
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <p>Ready to unlock your organization's potential? We'd love to discuss how we can help you achieve your strategic objectives.</p>
+                    <h3>Let's Connect</h3>
+                    <p>Every engagement with us begins with understanding your unique challenges. Let’s explore how we can create lasting value together.</p>
                     
                     <div class="contact-item">
                         <div class="contact-icon">
@@ -312,7 +284,7 @@
                         </div>
                         <div>
                             <strong>Phone</strong><br>
-                            +1 (555) 123-4567
+                            +1 (807) 708-2071
                         </div>
                     </div>
                     
@@ -322,7 +294,7 @@
                         </div>
                         <div>
                             <strong>Office</strong><br>
-                            Available for virtual and on-site consultations
+                            Based out of the Thunder Bay, Ontario, area, we are available for virtual, phone and on-site consultations
                         </div>
                     </div>
                     
@@ -380,7 +352,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Ugray Consulting Limited. All rights reserved. | Professional consulting services for sustainable growth and operational excellence.</p>
+            <p>&copy; 2026 Ugray Consulting Limited. All rights reserved. | First Nation-owned, professional consulting services for sustainable growth and excellence.</p>
         </div>
     </footer>
 
