@@ -48,6 +48,16 @@
 }
 
 /* Base Typography */
+/* Crop top 15% of carousel images */
+.carousel-crop {
+    width: 100%;
+    max-width: 400px;
+    height: 340px; /* 400px * 0.85 = 340px */
+    object-fit: cover;
+    object-position: bottom;
+    display: block;
+    margin: 20px auto;
+}
 body {
     font-family: var(--font-primary);
     font-size: 16px;
