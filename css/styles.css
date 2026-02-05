@@ -52,7 +52,7 @@
 .carousel-crop {
     width: 100%;
     max-width: 400px;
-    height: 340px; /* 400px * 0.85 = 340px */
+    height: 320px; /* 400px * 0.80 = 320px */
     object-fit: cover;
     object-position: bottom;
     display: block;
