@@ -31,25 +31,30 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Smooth Scrolling for Navigation Links
-    const navLinks = document.querySelectorAll('a[href^="#"]');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                const headerHeight = document.querySelector('.header').offsetHeight;
-                const targetPosition = targetSection.offsetTop - headerHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
+    // Smooth scrolling temporarily disabled for anchor links to test structural bug
+    // const navLinks = document.querySelectorAll('a[href^="#"]');
+    // navLinks.forEach(link => {
+    //     link.addEventListener('click', function(e) {
+    //         e.preventDefault();
+    //         const targetId = this.getAttribute('href');
+    //         const targetSection = document.querySelector(targetId);
+    //         if (targetSection) {
+    //             // Recalculate header height at click time in case it changes
+    //             const header = document.querySelector('.header');
+    //             let headerHeight = 0;
+    //             if (header) {
+    //                 headerHeight = header.offsetHeight;
+    //             }
+    //             // Add a small extra offset to ensure section is not hidden
+    //             const extraOffset = 12;
+    //             const targetPosition = targetSection.offsetTop - headerHeight - extraOffset;
+    //             window.scrollTo({
+    //                 top: targetPosition,
+    //                 behavior: 'smooth'
+    //             });
+    //         }
+    //     });
+    // });
     
     // Header Background on Scroll
     const header = document.querySelector('.header');
@@ -283,6 +288,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
+    }
+    
+    // Autoplay Contact Us Video on Scroll
+    const contactVideo = document.querySelector('section#contact video');
+    if (contactVideo) {
+        const videoObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        contactVideo.play();
+                    } else {
+                        contactVideo.pause();
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+        videoObserver.observe(contactVideo);
     }
     
     // Console log for debugging (remove in production)
