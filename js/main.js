@@ -109,9 +109,26 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             if (isValid) {
-                // Show success message
-                showMessage('Thank you for your message! We\'ll get back to you soon.', 'success');
-                this.reset();
+                // Submit the form to Formspree
+                const form = this;
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        showMessage('Thank you for your message! We\'ll get back to you soon.', 'success');
+                        form.reset();
+                    } else {
+                        showMessage('There was an error sending your message. Please try again.', 'error');
+                    }
+                })
+                .catch(error => {
+                    showMessage('There was an error sending your message. Please try again.', 'error');
+                });
             } else {
                 showMessage('Please fill in all required fields correctly.', 'error');
             }
