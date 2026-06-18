@@ -150,6 +150,14 @@ document.addEventListener('DOMContentLoaded', function() {
             messageElement.remove();
         }, 5000);
     }
+
+    // Show a success message after provider redirect (e.g., ?submitted=1#contact).
+    const url = new URL(window.location.href);
+    if (url.searchParams.get('submitted') === '1' && contactForm) {
+        showMessage('Thank you. Your message was sent successfully.', 'success');
+        url.searchParams.delete('submitted');
+        window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
+    }
     
     // Intersection Observer for Animations
     const observerOptions = {
