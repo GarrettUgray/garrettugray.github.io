@@ -965,6 +965,24 @@ textarea:focus {
     margin: 0 auto;
     box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
+/* Right-side arrow hint — always faintly visible, brightens on hover */
+.carousel::after {
+    content: '›';
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    font-size: 3rem;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.35);
+    pointer-events: none;
+    transition: color 0.3s;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+.carousel:hover::after {
+    color: rgba(255, 255, 255, 0.85);
+}
 .carousel:hover .slide:after,
 .carousel:hover .counter,
 .carousel:hover .slide:before {
