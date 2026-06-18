@@ -348,7 +348,10 @@
                 
                 <div class="contact-form">
                     <h3>Send Us a Message</h3>
-                    <form id="contact-form" action="https://formspree.io/info@ugrayconsulting.com" method="POST">
+                    <form id="contact-form" action="https://formsubmit.co/info@ugrayconsulting.com" method="POST">
+                        <input type="hidden" name="_subject" value="New website inquiry - Ugray Consulting">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://ugrayconsulting.com/#contact">
                         <div class="form-group">
                             <label for="name">Full Name *</label>
                             <input type="text" id="name" name="name" required placeholder="Your full name">
