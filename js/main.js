@@ -109,8 +109,31 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             if (isValid) {
-                // Submit natively after client-side validation so hosted form services can process it.
-                this.submit();
+                // Submit asynchronously to avoid page navigation/scroll jumps.
+                fetch('https://formsubmit.co/ajax/info@ugrayconsulting.com', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        ...formObject,
+                        _subject: 'New website inquiry - Ugray Consulting',
+                        _captcha: 'false'
+                    })
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data && data.success === 'true') {
+                            showMessage('Thank you. Your message was sent successfully.', 'success');
+                            this.reset();
+                        } else {
+                            showMessage('Message could not be sent. Please try again in a moment.', 'error');
+                        }
+                    })
+                    .catch(() => {
+                        showMessage('Message could not be sent. Please try again in a moment.', 'error');
+                    });
             } else {
                 showMessage('Please fill in all required fields correctly.', 'error');
             }
@@ -151,14 +174,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
     }
 
-    // Show a success message after provider redirect (e.g., ?submitted=1#contact).
-    const url = new URL(window.location.href);
-    if (url.searchParams.get('submitted') === '1' && contactForm) {
-        showMessage('Thank you. Your message was sent successfully.', 'success');
-        url.searchParams.delete('submitted');
-        window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
-    }
-    
     // Intersection Observer for Animations
     const observerOptions = {
         threshold: 0.1,
