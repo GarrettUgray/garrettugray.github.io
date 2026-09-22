@@ -438,16 +438,14 @@ a:hover {
     line-height: 1.6;
 }
 
-
-
 .spancard h3 {
-    /* text-align: center; */
+    text-align: center;
 }
 
 .spancard div {
     display: grid;
     gap: var(--spacing-lg);
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 /* Services Section */
 .services, .capabilities {
@@ -458,8 +456,28 @@ a:hover {
     display: grid;
     gap: var(--spacing-lg);
     grid-template-columns: 1fr;
+    align-items: stretch;
 }
-.capabilities-grid {}
+.indigenous-services-grid {
+    grid-template-columns: 1fr;
+}
+.capabilities-grid .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.capabilities-grid .card p:last-child {
+    margin-bottom: 0;
+}
+
+.capabilities-grid .spancard div {
+    align-content: start;
+}
+
+.capabilities-grid .spancard {
+    grid-column: auto;
+}
 
 /* About Section */
 .about {
@@ -862,6 +880,9 @@ a:hover {
     .services-grid, .capabilities-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .indigenous-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
     
     .about-content {
         grid-template-columns: 1fr 1fr;
@@ -871,7 +892,7 @@ a:hover {
         grid-template-columns: 1fr 1fr;
     }
     .spancard {
-    grid-column: span 3
+    grid-column: auto;
 }
 }
 
@@ -891,6 +912,18 @@ a:hover {
     
     .services-grid, .capabilities-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+    .indigenous-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .capabilities-grid .spancard {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 767px) {
+    .spancard div {
+        grid-template-columns: 1fr;
     }
 }
 
