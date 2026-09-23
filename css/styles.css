@@ -225,12 +225,15 @@ a:hover {
     list-style: none;
     padding-left: 2rem;
     gap: var(--spacing-lg);
+    align-items: center;
+    font-size: 0.85rem;
 }
 
 .nav-menu a {
     color: var(--white);
     font-weight: 500;
     transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .nav-menu a:hover {
@@ -285,6 +288,50 @@ a:hover {
     min-height: 100vh;
     display: flex;
     align-items: center;
+}
+
+.page-hero {
+    min-height: auto;
+    padding: calc(var(--spacing-2xl) + 60px) 0 var(--spacing-2xl) 0;
+}
+
+.page-hero .hero-content {
+    max-width: 900px;
+}
+
+.page-hero .subtitle {
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-hero .description {
+    max-width: 760px;
+}
+
+.bill-c39-section .card ul {
+    padding-left: 1.2rem;
+    color: var(--medium-grey);
+}
+
+.bill-c39-section .card li {
+    margin-bottom: 0.5rem;
+}
+
+.bill-c39-cta {
+    background: linear-gradient(135deg, var(--primary-black) 0%, var(--charcoal-grey) 100%);
+    color: var(--white);
+    border-radius: 18px;
+    padding: 2rem;
+}
+
+.bill-c39-cta h2,
+.bill-c39-cta p {
+    color: var(--white);
+}
+
+.bill-c39-cta .hero-buttons {
+    margin-top: 1.5rem;
 }
 
 .hero-content h1 {
