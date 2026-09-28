@@ -83,9 +83,10 @@
             </div>
 
             <div class="card bill-c39-cta" style="margin-bottom: 2rem;">
-                <h2 class="section-heading-prata">Why this matters now</h2>
-                <p>The communities that prepare early will be better positioned to protect their rights, negotiate meaningful agreements, and shape outcomes on their territories. Waiting until a project is already in motion will leave very little room to catch up.</p>
-                <img src="images/bear fibonacci sequence curve and interconnectedness of all things in existence.png" alt="Bear with fibonacci sequence curve symbolizing interconnectedness" class="bill-c39-why-image" />
+                <div class="bill-c39-why-copy">
+                    <h2 class="section-heading-prata">Why this matters now</h2>
+                    <p>The communities that prepare early will be better positioned to protect their rights, negotiate meaningful agreements, and shape outcomes on their territories. Waiting until a project is already in motion will leave very little room to catch up.</p>
+                </div>
             </div>
 
             <div class="grid grid-2">
@@ -146,7 +147,7 @@
         <div class="container">
             <div class="text-center mb-lg">
                 <h2 class="section-heading-prata">How Ugray Consulting Can Help</h2>
-                <p>As a 100% First Nation-owned firm with deep experience in Indigenous engagement, Section 35 rights, and community capacity building, we provide practical support tailored to the realities Bill C-39 creates.</p>
+                <p>As a 100% First Nation-owned firm with government expertise in assessing and fulfilling the duty to consult and accommodate, industry experience in successful infrastructure megaproject planning and permitting, community capacity building, and lived Indigenous experience, we provide practical support tailored to the realities Bill C-39 creates.</p>
             </div>
 
             <div class="grid grid-2">
@@ -213,8 +214,12 @@
         <div class="container">
             <div class="card bill-c39-cta">
                 <h2 class="section-heading-prata">Take the Next Step</h2>
+                <video id="bill-c39-eagle-video" controls muted playsinline style="display: block; margin: 0 auto 2em; max-width: 100%;">
+                    <source src="images/GOLDEN EAGLE LANDING ON ROCK, THEN LOGO.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
                 <p>Bill C-39 is a present reality that will shape how projects are approved on and near your territory for years to come. The communities that are best prepared will be best positioned to protect their rights and secure meaningful agreements.</p>
-                <p>Ugray Consulting Limited is here to walk alongside you, one step at a time.</p>
+                <p>Ugray Consulting Limited is here to walk alongside you, each step of the way.</p>
                 <div class="hero-buttons">
                     <a href="index.html#contact" class="btn btn-primary">Book a Consultation</a>
                     <a href="index.html" class="btn btn-outline-white">Return Home</a>
@@ -230,5 +235,23 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        var video = document.getElementById('bill-c39-eagle-video');
+        if (video) {
+            var played = false;
+            function checkVideoInView() {
+                var rect = video.getBoundingClientRect();
+                var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                if (rect.top < windowHeight && rect.bottom > 0 && !played) {
+                    video.play();
+                    video.playbackRate = 0.85;
+                    played = true;
+                }
+            }
+            window.addEventListener('scroll', checkVideoInView);
+            window.addEventListener('resize', checkVideoInView);
+            checkVideoInView();
+        }
+    </script>
 </body>
 </html>
