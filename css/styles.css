@@ -224,7 +224,7 @@ a:hover {
     display: none;
     list-style: none;
     padding-left: 2rem;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-sm);
     align-items: center;
     font-size: 0.85rem;
 }
@@ -911,15 +911,6 @@ a:hover {
         padding: 0 var(--spacing-lg);
     }
     
-    
-    .nav-menu {
-        display: flex;
-    }
-    
-    .mobile-menu-toggle {
-        display: none;
-    }
-    
     .hero-content h1 {
         font-size: 3.5rem;
     }
@@ -957,6 +948,14 @@ a:hover {
 
 /* Responsive Design - Desktop */
 @media (min-width: 1024px) {
+    .nav-menu {
+        display: flex;
+    }
+
+    .mobile-menu-toggle {
+        display: none;
+    }
+
     .section {
         padding: var(--spacing-2xl) 0;
     }
